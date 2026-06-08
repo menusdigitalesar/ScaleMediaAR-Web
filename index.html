@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Scale AR Media — Haz crecer tus redes</title>
+<meta name="description" content="Seguidores reales, entrega rápida y resultados comprobados para Instagram y TikTok." />
+<meta property="og:title" content="Scale AR Media — Haz crecer tus redes" />
+<meta property="og:description" content="Seguidores reales, entrega rápida y resultados comprobados." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="sa-logo.png" />
+<link rel="icon" href="sa-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['"Space Grotesk"','system-ui','sans-serif'] }
+      }
+    }
+  }
+</script>
+<style>
+  :root{
+    --bg:#000; --fg:#fafafa; --muted:#a0a0a0; --border:rgba(255,255,255,.1);
+  }
+  html,body{background:#000;color:var(--fg);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Space Grotesk",system-ui,sans-serif;letter-spacing:-.02em}
+  .text-silver{background:linear-gradient(180deg,#fff 0%,#b8b8b8 45%,#fff 60%,#8a8a8a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 12px rgba(255,255,255,.15))}
+  .shimmer-text{background:linear-gradient(90deg,#888 0%,#fff 50%,#888 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 4s linear infinite}
+  @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+  .card-glass{background:linear-gradient(180deg,rgba(255,255,255,.05) 0%,rgba(255,255,255,.015) 100%);border:1px solid rgba(255,255,255,.08);box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 30px 60px -20px rgba(0,0,0,.9);backdrop-filter:blur(12px)}
+  .hairline{background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent)}
+  .logo-3d{filter:drop-shadow(0 0 40px rgba(255,255,255,.35)) drop-shadow(0 20px 30px rgba(0,0,0,.9))}
+  @keyframes rise-in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  .animate-rise-in{animation:rise-in .9s ease-out both}
+  @keyframes spin-slow{to{transform:rotate(360deg)}}
+  .animate-spin-slow{animation:spin-slow 20s linear infinite}
+  /* Starfield */
+  #stars,#stars2,#stars3{position:fixed;inset:0;pointer-events:none;z-index:0}
+  .star{position:absolute;background:#fff;border-radius:50%;opacity:.7;animation:twinkle 3s infinite ease-in-out}
+  @keyframes twinkle{0%,100%{opacity:.2}50%{opacity:1}}
+  .shooting{position:absolute;height:2px;width:120px;background:linear-gradient(90deg,#fff,transparent);border-radius:2px;filter:drop-shadow(0 0 6px #fff);opacity:0;transform-origin:left center}
+  @keyframes shoot{0%{opacity:0;transform:translate(0,0) rotate(20deg) scaleX(.2)}10%{opacity:1}100%{opacity:0;transform:translate(900px,400px) rotate(20deg) scaleX(1)}}
+  .nebula{position:fixed;inset:0;pointer-events:none;z-index:0;background:
+    radial-gradient(ellipse at 20% 20%,rgba(99,102,241,.08),transparent 50%),
+    radial-gradient(ellipse at 80% 60%,rgba(168,85,247,.06),transparent 55%),
+    radial-gradient(ellipse at 50% 100%,rgba(59,130,246,.06),transparent 50%)}
+  .cart-fab{position:fixed;bottom:1.5rem;right:1.5rem;z-index:40}
+</style>
+</head>
+<body>
+<div class="nebula"></div>
+<div id="stars"></div>
+<div id="shooting-stars"></div>
+
+<div class="relative" style="z-index:1">
+<!-- NAV -->
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-black/40 border-b border-white/10">
+  <div class="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2">
+      <img src="sa-logo.png" alt="Scale AR" class="h-9 w-9 object-contain" />
+      <span class="font-display font-bold tracking-tight shimmer-text">SCALE AR</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-neutral-400">
+      <a href="#servicios" class="hover:text-white transition">Servicios</a>
+      <a href="#precios" class="hover:text-white transition">Precios</a>
+      <a href="#testimonios" class="hover:text-white transition">Reseñas</a>
+      <a href="#contacto" class="hover:text-white transition">Contacto</a>
+    </nav>
+    <a href="#precios" class="inline-flex items-center gap-2 rounded-full bg-white text-black px-4 py-2 text-sm font-medium hover:opacity-90 transition shadow-[0_8px_30px_rgba(255,255,255,0.15)]">
+      Pedir ahora →
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative">
+  <div class="mx-auto max-w-7xl px-6 pt-20 pb-32 text-center">
+    <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 backdrop-blur px-4 py-1.5 text-xs text-neutral-400 mb-10 animate-rise-in">
+      ✨ Usado por +1.000 cuentas en Argentina
+    </div>
+    <div class="relative mx-auto mb-10 w-fit">
+      <div class="absolute inset-0 -m-12 rounded-full opacity-30 animate-spin-slow pointer-events-none" style="background:conic-gradient(from 0deg,transparent 0%,rgba(255,255,255,.3) 25%,transparent 50%,rgba(255,255,255,.2) 75%,transparent 100%);filter:blur(24px)"></div>
+      <img src="sa-media.png" alt="Scale Media" class="relative h-44 md:h-64 w-auto object-contain logo-3d" />
+    </div>
+    <h1 class="text-5xl md:text-7xl font-bold leading-[1.05] mb-6 animate-rise-in">
+      <span class="text-silver">Resultados reales.</span><br />
+      <span class="text-silver">Confianza total.</span>
+    </h1>
+    <p class="max-w-xl mx-auto text-base md:text-lg text-neutral-400 mb-10 animate-rise-in">
+      Hacé crecer tus redes con seguidores reales, entrega inmediata y soporte personalizado. La forma profesional de escalar tu presencia digital.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-3 animate-rise-in">
+      <a href="#precios" class="group inline-flex items-center gap-2 rounded-full bg-white text-black px-6 py-3 text-sm font-semibold hover:opacity-90 transition shadow-[0_10px_40px_rgba(255,255,255,0.2)] hover:-translate-y-0.5">
+        💬 Cualquier consulta podes escribirnos →
+      </a>
+      <a href="#precios" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 backdrop-blur px-6 py-3 text-sm font-semibold hover:bg-white/10 transition">
+        Ver precios
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="servicios" class="mx-auto max-w-7xl px-6 py-24">
+  <div class="text-center mb-14">
+    <p class="text-xs tracking-[0.3em] text-neutral-400 mb-3">— POR QUÉ ELEGIRNOS —</p>
+    <h2 class="text-3xl md:text-5xl font-bold text-silver">Confianza que se ve,<br />resultados que crecen.</h2>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="features"></div>
+</section>
+
+<!-- CATALOG -->
+<section id="precios" class="mx-auto max-w-7xl px-6 py-24">
+  <div class="text-center mb-10">
+    <p class="text-xs tracking-[0.3em] text-neutral-400 mb-3">— CATÁLOGO —</p>
+    <h2 class="text-3xl md:text-5xl font-bold text-silver">Nuestros paquetes</h2>
+    <p class="text-neutral-400 mt-3 max-w-xl mx-auto">Elegí el servicio, tocá <span class="text-white font-semibold">+</span> para agregarlo al pedido y cerrá la compra por transferencia + WhatsApp.</p>
+  </div>
+  <div class="flex flex-wrap items-center justify-center gap-2 mb-10" id="filters"></div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" id="catalog-grid"></div>
+  <p class="text-center text-xs text-neutral-400 mt-10 max-w-xl mx-auto">
+    Importante: el pago se realiza por <span class="text-white">transferencia bancaria</span>. Al confirmar tu pedido vas a tener que adjuntar la <span class="text-white">captura del comprobante</span> en el chat de WhatsApp.
+  </p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonios" class="mx-auto max-w-7xl px-6 py-24">
+  <div class="text-center mb-12 flex items-center justify-center gap-4">
+    <span class="h-px w-12 hairline"></span>
+    <p class="text-xs tracking-[0.3em] text-neutral-400">LO QUE DICEN NUESTROS CLIENTES</p>
+    <span class="h-px w-12 hairline"></span>
+  </div>
+  <div class="grid md:grid-cols-3 gap-4" id="testimonials"></div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="mx-auto max-w-7xl px-6 py-24">
+  <div class="text-center mb-14">
+    <p class="text-xs tracking-[0.3em] text-neutral-400 mb-3">— CÓMO FUNCIONA —</p>
+    <h2 class="text-3xl md:text-5xl font-bold text-silver">3 pasos. Sin vueltas.</h2>
+  </div>
+  <div class="grid md:grid-cols-3 gap-4">
+    <div class="card-glass rounded-2xl p-8"><div class="font-display text-5xl font-bold text-silver mb-4">01</div><h3 class="font-display text-xl font-semibold mb-2">Elegí tu plan</h3><p class="text-sm text-neutral-400">Seleccioná los paquetes que necesitás.</p></div>
+    <div class="card-glass rounded-2xl p-8"><div class="font-display text-5xl font-bold text-silver mb-4">02</div><h3 class="font-display text-xl font-semibold mb-2">Transferí</h3><p class="text-sm text-neutral-400">Coordinamos el pago por transferencia bancaria.</p></div>
+    <div class="card-glass rounded-2xl p-8"><div class="font-display text-5xl font-bold text-silver mb-4">03</div><h3 class="font-display text-xl font-semibold mb-2">Crecé</h3><p class="text-sm text-neutral-400">Recibís el servicio rápido y con soporte.</p></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contacto" class="mx-auto max-w-5xl px-6 py-24">
+  <div class="card-glass rounded-3xl p-10 md:p-16 text-center relative overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.8)]">
+    <img src="sa-logo.png" alt="" class="h-20 w-auto mx-auto mb-6 logo-3d" />
+    <h2 class="text-3xl md:text-5xl font-bold text-silver mb-4">Cualquier consulta podes escribirnos</h2>
+    <p class="text-neutral-400 max-w-md mx-auto mb-8">Escribinos por whatsapp, atencion personalizada en minutos</p>
+    <a href="https://wa.me/5491139432085?text=Hola%20Scale%20AR%2C%20quiero%20comprar%20seguidores%0A%0ANombre%3A%0AURL%20Perfil%20IG%3A%0ACantidad%20de%20seguidores%3A" target="_blank" rel="noreferrer" class="inline-flex items-center gap-3 rounded-full bg-white text-black px-8 py-4 font-semibold hover:opacity-90 transition shadow-[0_20px_60px_rgba(255,255,255,0.25)] hover:-translate-y-0.5">
+      💬 +54 9 11 3943-2085 →
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 mt-12 relative">
+  <div class="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
+    <div class="flex items-center gap-2">
+      <img src="sa-logo.png" alt="" class="h-6 w-6 object-contain" />
+      <span class="tracking-[0.3em] text-xs shimmer-text">SCALE AR MEDIA</span>
+    </div>
+    <p class="text-xs">© <span id="year"></span> Scale AR Media. Todos los derechos reservados.</p>
+    <a href="https://www.instagram.com/scalear.media/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 hover:text-white transition">@scalear.media</a>
+  </div>
+</footer>
+</div>
+
+<!-- Cart FAB -->
+<button id="cart-fab" class="cart-fab hidden inline-flex items-center gap-3 rounded-full bg-white text-black px-5 py-3.5 font-semibold shadow-[0_20px_60px_rgba(255,255,255,0.3)] hover:-translate-y-0.5 transition">
+  🛍️ Mi pedido · $<span id="fab-total">0</span>
+</button>
+
+<!-- Drawer overlay -->
+<div id="overlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[60] hidden"></div>
+<aside id="drawer" class="fixed top-0 right-0 h-full w-full sm:max-w-md bg-black/95 border-l border-white/10 z-[70] translate-x-full transition-transform duration-300 flex flex-col">
+  <div id="drawer-content" class="flex-1 flex flex-col overflow-hidden"></div>
+</aside>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Stars
+(function(){
+  const c = document.getElementById('stars');
+  for(let i=0;i<160;i++){
+    const s=document.createElement('div'); s.className='star';
+    const sz=Math.random()*2+.5;
+    s.style.width=sz+'px'; s.style.height=sz+'px';
+    s.style.left=Math.random()*100+'%'; s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=(Math.random()*3)+'s';
+    c.appendChild(s);
+  }
+  function shoot(){
+    const ss=document.createElement('div'); ss.className='shooting';
+    ss.style.left=(Math.random()*40)+'%'; ss.style.top=(Math.random()*40)+'%';
+    ss.style.animation='shoot 1.4s ease-out forwards';
+    document.getElementById('shooting-stars').appendChild(ss);
+    setTimeout(()=>ss.remove(),1600);
+  }
+  setInterval(shoot, 4500);
+})();
+
+// Features
+const FEATURES = [
+  {i:'🛡️',t:'100% Seguro',d:'Tu cuenta siempre protegida.'},
+  {i:'📈',t:'Crecimiento Real',d:'Seguidores reales y activos.'},
+  {i:'✅',t:'Garantía Total',d:'Si algo falla, lo solucionamos.'},
+  {i:'⚡',t:'Entrega Rápida',d:'Sin demoras, sin excusas.'},
+];
+document.getElementById('features').innerHTML = FEATURES.map(f=>`
+  <div class="card-glass rounded-2xl p-6 text-center transition hover:-translate-y-1 hover:border-white/20">
+    <div class="mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-white/15 to-white/5 text-2xl">${f.i}</div>
+    <h3 class="font-display font-semibold mb-1">${f.t}</h3>
+    <p class="text-xs text-neutral-400">${f.d}</p>
+  </div>`).join('');
+
+const TESTIS = [
+  {t:'Muy buena atención y los seguidores llegaron rápido.',u:'@juanp_'},
+  {t:'Se nota la diferencia, perfil más profesional y con más alcance.',u:'@lauti.mkt'},
+  {t:'100% recomendados, seguros y reales.',u:'@martina.ok'},
+];
+document.getElementById('testimonials').innerHTML = TESTIS.map(t=>`
+  <figure class="card-glass rounded-2xl p-6">
+    <div class="flex gap-1 mb-4">${'★'.repeat(5).split('').map(_=>'<span class=\"text-white\">★</span>').join('')}</div>
+    <blockquote class="text-base mb-4">"${t.t}"</blockquote>
+    <figcaption class="text-sm text-neutral-400">${t.u}</figcaption>
+  </figure>`).join('');
+
+// Catalog data
+const PACKS = [
+  {id:"ig-seg-100",platform:"instagram",type:"seguidores",qty:100,price:500,label:"100"},
+  {id:"ig-seg-200",platform:"instagram",type:"seguidores",qty:200,price:900,label:"200"},
+  {id:"ig-seg-300",platform:"instagram",type:"seguidores",qty:300,price:1500,label:"300"},
+  {id:"ig-seg-500",platform:"instagram",type:"seguidores",qty:500,price:1900,label:"500"},
+  {id:"ig-seg-1000",platform:"instagram",type:"seguidores",qty:1000,price:3000,label:"1.000"},
+  {id:"ig-seg-2000",platform:"instagram",type:"seguidores",qty:2000,price:4500,label:"2.000"},
+  {id:"ig-seg-5000",platform:"instagram",type:"seguidores",qty:5000,price:8000,label:"5.000"},
+  {id:"ig-lk-500",platform:"instagram",type:"likes",qty:500,price:500,label:"500"},
+  {id:"ig-lk-1000",platform:"instagram",type:"likes",qty:1000,price:1000,label:"1.000"},
+  {id:"ig-lk-5000",platform:"instagram",type:"likes",qty:5000,price:2000,label:"5.000"},
+  {id:"ig-lk-7000",platform:"instagram",type:"likes",qty:7000,price:4000,label:"7.000"},
+  {id:"ig-v-1000",platform:"instagram",type:"vistas",qty:1000,price:1000,label:"1.000"},
+  {id:"ig-v-10000",platform:"instagram",type:"vistas",qty:10000,price:3000,label:"10.000"},
+  {id:"ig-v-100000",platform:"instagram",type:"vistas",qty:100000,price:10000,label:"100.000"},
+  {id:"tt-seg-100",platform:"tiktok",type:"seguidores",qty:100,price:2000,label:"100"},
+  {id:"tt-seg-500",platform:"tiktok",type:"seguidores",qty:500,price:6000,label:"500"},
+  {id:"tt-seg-1000",platform:"tiktok",type:"seguidores",qty:1000,price:10000,label:"1.000"},
+  {id:"tt-seg-5000",platform:"tiktok",type:"seguidores",qty:5000,price:30000,label:"5.000"},
+  {id:"tt-lk-500",platform:"tiktok",type:"likes",qty:500,price:500,label:"500"},
+  {id:"tt-lk-1000",platform:"tiktok",type:"likes",qty:1000,price:1000,label:"1.000"},
+  {id:"tt-lk-5000",platform:"tiktok",type:"likes",qty:5000,price:2000,label:"5.000"},
+  {id:"tt-lk-7000",platform:"tiktok",type:"likes",qty:7000,price:4000,label:"7.000"},
+  {id:"tt-v-1000",platform:"tiktok",type:"vistas",qty:1000,price:1000,label:"1.000"},
+  {id:"tt-v-10000",platform:"tiktok",type:"vistas",qty:10000,price:3000,label:"10.000"},
+  {id:"tt-v-100000",platform:"tiktok",type:"vistas",qty:100000,price:10000,label:"100.000"},
+];
+const GROUPS = [
+  {key:"ig-seg",platform:"instagram",type:"seguidores",title:"Seguidores Instagram",icon:"👥",note:"Entrega rápida · Cuentas reales"},
+  {key:"ig-lk",platform:"instagram",type:"likes",title:"Likes Instagram",icon:"❤️",note:"Aumentá el engagement de tus posts"},
+  {key:"ig-v",platform:"instagram",type:"vistas",title:"Vistas Instagram",icon:"👁️",note:"Más alcance en tus Reels"},
+  {key:"tt-seg",platform:"tiktok",type:"seguidores",title:"Seguidores TikTok",icon:"👥",note:"Crecé en TikTok con base sólida"},
+  {key:"tt-lk",platform:"tiktok",type:"likes",title:"Likes TikTok",icon:"❤️",note:"Viralizá tus videos"},
+  {key:"tt-v",platform:"tiktok",type:"vistas",title:"Vistas TikTok",icon:"👁️",note:"Aumentá tus visualizaciones"},
+];
+const FILTERS = [{k:"todo",l:"Todo",i:"🛍️"},{k:"instagram",l:"Instagram",i:"📷"},{k:"tiktok",l:"TikTok",i:"🎵"}];
+const PAYMENT = { alias:"gonzawifi", titular:"Parra Gonzalo Ismael", cbu:"3840200500000043068948" };
+const WA_NUMBER = "5491139432085";
+
+let filter = "todo";
+let cart = {};
+let view = "cart";
+
+const fmt = n => n.toLocaleString("es-AR");
+
+function renderFilters(){
+  document.getElementById('filters').innerHTML = FILTERS.map(f=>{
+    const active = filter===f.k;
+    return `<button data-f="${f.k}" class="filter-btn inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition border ${active?'bg-white text-black border-white shadow-[0_10px_30px_rgba(255,255,255,0.2)]':'card-glass text-neutral-400 hover:text-white hover:border-white/20'}">${f.i} ${f.l}</button>`;
+  }).join('');
+  document.querySelectorAll('.filter-btn').forEach(b=>b.onclick=()=>{filter=b.dataset.f;renderFilters();renderCatalog();});
+}
+function renderCatalog(){
+  const groups = GROUPS.filter(g=>filter==='todo'||g.platform===filter);
+  document.getElementById('catalog-grid').innerHTML = groups.map(g=>{
+    const items = PACKS.filter(p=>p.platform===g.platform && p.type===g.type);
+    return `
+    <div class="card-glass rounded-2xl p-5 flex flex-col shadow-[0_30px_80px_rgba(0,0,0,0.6)]">
+      <div class="flex items-center gap-2 mb-1"><span>${g.icon}</span><h3 class="font-display font-semibold">${g.title}</h3></div>
+      <p class="text-[11px] text-neutral-400 mb-4">${g.note}</p>
+      <div class="rounded-xl overflow-hidden border border-white/5">
+        ${items.map((p,i)=>`
+        <div class="grid grid-cols-[1fr_auto_auto] items-center gap-3 px-4 py-3 ${i!==items.length-1?'border-b border-white/5':''} hover:bg-white/5 transition">
+          <div class="font-display text-base font-semibold text-silver">${p.label}</div>
+          <div class="text-sm font-display font-bold tabular-nums">$${fmt(p.price)}</div>
+          <button data-add="${p.id}" class="add-btn inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-black hover:opacity-90 transition shadow-[0_6px_20px_rgba(255,255,255,0.25)]">+</button>
+        </div>`).join('')}
+      </div>
+      <p class="text-[11px] text-neutral-400 mt-4">✓ Entrega rápida · ✓ Soporte 24/7 · ✓ Pago por transferencia</p>
+    </div>`;
+  }).join('');
+  document.querySelectorAll('.add-btn').forEach(b=>b.onclick=()=>add(b.dataset.add));
+}
+function add(id){
+  const p = PACKS.find(x=>x.id===id);
+  cart[id] = { pack:p, quantity:(cart[id]?.quantity||0)+1 };
+  updateFab();
+}
+function updateFab(){
+  const lines = Object.values(cart);
+  const totalItems = lines.reduce((s,l)=>s+l.quantity,0);
+  const total = lines.reduce((s,l)=>s+l.quantity*l.pack.price,0);
+  const fab = document.getElementById('cart-fab');
+  if(totalItems>0){ fab.classList.remove('hidden'); document.getElementById('fab-total').textContent=fmt(total); }
+  else fab.classList.add('hidden');
+}
+document.getElementById('cart-fab').onclick = ()=>{ view='cart'; openDrawer(); };
+
+function openDrawer(){
+  document.getElementById('overlay').classList.remove('hidden');
+  document.getElementById('drawer').style.transform='translateX(0)';
+  renderDrawer();
+}
+function closeDrawer(){
+  document.getElementById('overlay').classList.add('hidden');
+  document.getElementById('drawer').style.transform='translateX(100%)';
+}
+document.getElementById('overlay').onclick = closeDrawer;
+
+function renderDrawer(){
+  const lines = Object.values(cart);
+  const total = lines.reduce((s,l)=>s+l.quantity*l.pack.price,0);
+  const c = document.getElementById('drawer-content');
+  if(view==='cart'){
+    c.innerHTML = `
+      <div class="px-6 py-5 border-b border-white/10 flex items-center justify-between">
+        <div class="font-display tracking-[0.3em] text-base">MI PEDIDO</div>
+        <button id="close-d" class="h-8 w-8 rounded-full border border-white/10 hover:bg-white/10">✕</button>
+      </div>
+      <div class="flex-1 overflow-y-auto px-6 py-5 space-y-3">
+        ${lines.length===0?'<div class="text-center text-neutral-400 py-20 text-sm">Tu pedido está vacío.</div>':''}
+        ${lines.map(l=>`
+          <div class="card-glass rounded-xl p-4 flex items-start justify-between gap-3">
+            <div class="min-w-0">
+              <div class="font-semibold text-sm capitalize">${l.pack.type} ${l.pack.platform==='instagram'?'Instagram':'TikTok'}</div>
+              <div class="text-xs text-neutral-400">${l.pack.label}</div>
+              <div class="font-display font-bold text-silver mt-1">$${fmt(l.pack.price*l.quantity)} ARS</div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button data-dec="${l.pack.id}" class="h-7 w-7 rounded-full border border-white/10 hover:bg-white/10">−</button>
+              <span class="w-5 text-center text-sm font-semibold">${l.quantity}</span>
+              <button data-inc="${l.pack.id}" class="h-7 w-7 rounded-full border border-white/10 hover:bg-white/10">+</button>
+              <button data-rm="${l.pack.id}" class="h-7 w-7 rounded-full border border-white/10 hover:bg-white/10 ml-1">🗑</button>
+            </div>
+          </div>`).join('')}
+      </div>
+      <div class="border-t border-white/10 px-6 py-5 space-y-4">
+        <div class="flex items-center justify-between"><span class="text-sm text-neutral-400">Total</span><span class="font-display text-2xl font-bold text-silver">$${fmt(total)} ARS</span></div>
+        <button id="go-pay" ${lines.length===0?'disabled':''} class="w-full rounded-full bg-white text-black px-6 py-3.5 font-semibold disabled:opacity-30 hover:opacity-90 transition shadow-[0_15px_40px_rgba(255,255,255,0.2)]">💳 PAGAR AHORA</button>
+        <p class="text-center text-[11px] text-neutral-400">Transferencia bancaria · Pesos ARS</p>
+      </div>`;
+    c.querySelector('#close-d').onclick=closeDrawer;
+    c.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{cart[b.dataset.inc].quantity++;updateFab();renderDrawer();});
+    c.querySelectorAll('[data-dec]').forEach(b=>b.onclick=()=>{cart[b.dataset.dec].quantity--;if(cart[b.dataset.dec].quantity<=0)delete cart[b.dataset.dec];updateFab();renderDrawer();});
+    c.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{delete cart[b.dataset.rm];updateFab();renderDrawer();});
+    if(c.querySelector('#go-pay')) c.querySelector('#go-pay').onclick=()=>{view='pay';renderDrawer();};
+  } else {
+    c.innerHTML = `
+      <div class="px-6 py-5 border-b border-white/10 flex items-start justify-between gap-3">
+        <button id="back-cart" class="mt-1 h-7 w-7 rounded-full border border-white/10 hover:bg-white/10">←</button>
+        <div class="flex-1">
+          <div class="font-display tracking-[0.3em] text-base">DATOS DE PAGO</div>
+          <p class="text-[11px] text-neutral-400 mt-1">Realizá la transferencia y luego confirmá</p>
+        </div>
+        <div class="text-right">
+          <div class="text-[10px] text-neutral-400 tracking-widest">TOTAL</div>
+          <div class="font-display font-bold text-silver">$${fmt(total)} ARS</div>
+        </div>
+      </div>
+      <div class="flex-1 overflow-y-auto px-6 py-5 space-y-4">
+        <div>
+          <p class="text-[10px] tracking-widest text-neutral-400 mb-2">TU PEDIDO</p>
+          <div class="card-glass rounded-xl p-4 space-y-2">
+            ${lines.map(l=>`<div class="flex items-center justify-between text-sm"><span class="text-neutral-400"><span class="text-white capitalize">${l.pack.type} ${l.pack.platform==='instagram'?'IG':'TT'}</span> — ${l.pack.label} ×${l.quantity}</span><span class="font-semibold tabular-nums">$${fmt(l.pack.price*l.quantity)}</span></div>`).join('')}
+          </div>
+        </div>
+        <div>
+          <p class="text-[10px] tracking-widest text-neutral-400 mb-2">DATOS BANCARIOS</p>
+          <div class="space-y-2">
+            ${[['ALIAS',PAYMENT.alias],['TITULAR',PAYMENT.titular],['CBU',PAYMENT.cbu]].map(([k,v])=>`
+              <div class="card-glass rounded-xl px-4 py-3 flex items-center justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="text-[10px] tracking-widest text-neutral-400">${k}</div>
+                  <div class="font-mono text-sm truncate">${v}</div>
+                </div>
+                <button data-copy="${v}" class="copy-btn shrink-0 h-9 w-9 rounded-lg border border-white/10 hover:bg-white/10">📋</button>
+              </div>`).join('')}
+          </div>
+        </div>
+        <div class="card-glass rounded-xl p-4 text-xs text-neutral-400 leading-relaxed">
+          ⚠️ Hacé la transferencia por el monto exacto y <span class="text-white">guardá la captura del comprobante</span>. Vas a tener que adjuntarla en el chat de WhatsApp al confirmar.
+        </div>
+      </div>
+      <div class="border-t border-white/10 px-6 py-5 space-y-3">
+        <button id="confirm" class="w-full rounded-full bg-white text-black px-6 py-3.5 font-semibold hover:opacity-90 transition shadow-[0_15px_40px_rgba(255,255,255,0.2)]">✅ YA PAGUÉ - CONFIRMAR PEDIDO</button>
+      </div>`;
+    c.querySelector('#back-cart').onclick=()=>{view='cart';renderDrawer();};
+    c.querySelectorAll('.copy-btn').forEach(b=>b.onclick=()=>{navigator.clipboard.writeText(b.dataset.copy);b.textContent='✓';setTimeout(()=>b.textContent='📋',1500);});
+    c.querySelector('#confirm').onclick=()=>{
+      const platformName = p => p==='instagram'?'Instagram':'TikTok';
+      const urlLabel = t => t==='seguidores'?'URL de perfil':'URL de video';
+      const lineTexts = lines.map(l=>{
+        const item = `${l.pack.qty.toLocaleString('es-AR')} ${l.pack.type} de ${platformName(l.pack.platform)}`;
+        const qtyPart = l.quantity>1?` x${l.quantity}`:'';
+        return `• Compré ${item}${qtyPart}\n  ${urlLabel(l.pack.type)}: `;
+      });
+      const msg = `Hola Scale AR, ya hice la transferencia ✅\n\n`+lineTexts.join('\n')+`\n\nTotal: $${fmt(total)} ARS\nAdjunto la captura del comprobante de transferencia.`;
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank');
+    };
+  }
+}
+
+renderFilters();
+renderCatalog();
+</script>
+</body>
+</html>
