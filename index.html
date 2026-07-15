@@ -439,8 +439,39 @@ function renderDrawer(){
   }
 }
 
-renderFilters();
-renderCatalog();
+/* ============================================================
+   PRECIOS EDITABLES DESDE GOOGLE SHEETS
+   ------------------------------------------------------------
+   El cliente cambia precios en una planilla de Google.
+   1) Crear un Google Sheet con 2 columnas:  id | precio
+      (una fila por producto, usando los mismos id del array PACKS)
+   2) Archivo > Compartir > Publicar en la web > formato CSV
+   3) Pegar acá abajo el link CSV que te da Google:
+   ============================================================ */
+  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1rhC0ozEP48mk11hg60buj_Y4tZX3YojSTuysXHnou-E/gviz/tq?tqx=out:csv"; // lee la planilla (compartir como "cualquiera con el link: lector")
+
+async function loadPricesFromSheet(){
+  if(!SHEET_CSV_URL) return; // sin link => usa precios por defecto del array PACKS
+  try{
+    const res = await fetch(SHEET_CSV_URL, {cache:"no-store"});
+    if(!res.ok) return;
+    const text = await res.text();
+    const byId = {};
+    text.trim().split(/\r?\n/).forEach(row=>{
+      const cols = row.split(",").map(c=>c.trim().replace(/^"|"$/g,""));
+      const id = cols[0];
+      const price = parseInt((cols[1]||"").replace(/[^0-9]/g,""),10);
+      if(id && !isNaN(price)) byId[id] = price;
+    });
+    PACKS.forEach(p=>{ if(byId[p.id]!=null) p.price = byId[p.id]; });
+  }catch(e){ /* si falla, quedan los precios por defecto */ }
+}
+
+(async ()=>{
+  await loadPricesFromSheet();
+  renderFilters();
+  renderCatalog();
+})();
 
 // Translator toast
 (function(){
